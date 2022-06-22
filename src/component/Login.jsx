@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Form, Formik } from "formik";
 import * as Yup from "yup";
 import PasswordMask from 'react-password-mask';
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { api } from "../api";
 
 const Login = () => {
@@ -98,6 +98,10 @@ const Login = () => {
                         </Form>
                     )}
                 </Formik>
+                <div className="w-2/3 text-center mx-auto">
+                    Don't have an Account? 
+                    <Link to="/register" className="cursor-pointer text-blue-600 ml-2">Sign Up</Link>
+                </div>
             </div>
         </div>
     )
